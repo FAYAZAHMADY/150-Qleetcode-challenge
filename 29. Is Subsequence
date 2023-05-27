@@ -1,0 +1,23 @@
+//we will use two pointer approach here 
+class Solution {
+public:
+    bool isSubsequence(string s, string t) {
+       // j is a pointer which is pointing in the string s  
+       //j pointer starts with initial indix 
+        int j = 0;
+
+        //if the string is empty it is also the subsequence of the string so in this case ww will return true
+        if(s=="")return true;
+          
+          //now the second pointer i itrating in t string (as t is main string )
+          //we will compare the elements of "t" string to elements of "s" string 
+        for(int i=0; i<t.size(); i++){
+            if(t[i] == s[j])j++; //if ement matches then increment the j pointer
+
+            //if we reach the last element of s string means we are done 
+            if(j == s.size()) return true; 
+
+        }
+        return false; //if not then this is not subsequence 
+    }
+};
