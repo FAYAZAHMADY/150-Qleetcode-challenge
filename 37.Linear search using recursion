@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+bool linearsearch(arr[],int n,int k){
+    //base case
+    if( n==0 )
+    return false;
+
+    //recursive case
+    if(arr[0] == k){
+        return true;
+    }
+    else{
+        bool remaining = linearsearch(arr+1,n-1, k);
+        return remaining;
+    }
+}
+
+int main() {
+    int arr[5] = {3,4,,5,1,6};
+    int n = 5;
+    int k = 3;
+    bool ans = linearsearch(arr,n,k);
+
+    if(ans){
+        cout<<"present"<<endl;
+    }
+    else{
+        cout<<"absent"<<endl;
+    }
+    return 0;
+}
