@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int getsum(int arr[],int size){
+    //base case
+    if(size == 0 || size == 1)
+    return true;
+
+    //recursive case
+    if(arr[0]>arr[1])
+    return false;
+    else{
+        bool remaining = issorted(arr+1,size-1);
+        return return;
+    }
+    
+}
+
+int main() {
+ 
+ int arr[5] = {2,3,4,5,1};
+ int size = 5;
+
+ int ret = getsum(size,arr);
+ if(ret){
+     cout<<"is sorted "<<endl;
+ }
+ else{
+     cout<<"is not sorted"<<endl;
+ }
+ return 0;
+
+}
